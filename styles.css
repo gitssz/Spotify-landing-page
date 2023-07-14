@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+
+*{
+    padding:0;
+    margin:0;
+    font-size:100%;
+    border:0;
+}
+
+body{
+    /* font-family: 'Ubuntu', sans-serif; */
+    background-color: black;
+    /* color:white; */
+}
+
+/*===================navbar==============*/
+nav{
+    height: 70px;
+    background-color: black;
+    color:white;
+    
+}
+nav ul{
+    display:flex;
+    align-items: center;
+}
+
+nav .logo{
+    font-size:1.3rem;
+    font-weight:bolder;
+    display: flex;
+    align-items: center;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+nav ul li{
+    list-style-type: none;
+    padding:12px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color:#b3b3b3 !important;
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: bold;
+}
+
+nav ul li:hover{
+    color:white;
+}
+
+nav img{
+    height: 45px;
+    width:45px;
+    padding-right:5px;
+}
+
+nav .fa-solid{
+    padding:0 6px;
+    font-size:1.3rem;
+}
+
+/*=====================container=================== */
+.container{
+    min-height: 70vh;
+    font-family: 'Ubuntu',sans-serif;
+    /* background-color: black; */
+    background:url("kpop2.jpg");
+    color:white;
+    margin:20px auto;
+    width:70%;
+    border-radius:12px;
+    padding:30px;
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    box-shadow: 1px 1px 14px white;
+}
+
+.container h1{
+    font-size:2.2rem;
+    height: 50px;
+    margin:20px;
+}
+
+
+.song-item{
+    position:relative;
+    background-color: black;
+    height: 70px;
+    width:28vw;
+    border-radius: 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+.song-item img{
+    height:50px;
+    width:50px;
+    border-radius:50%;
+    margin:15px;
+}
+
+.song-name{
+display: flex;
+flex-direction: column;
+align-items: center;
+padding:10px;
+/* position:absolute;
+left:90px; */
+}
+
+.artist{
+    color:#b3b3b3;
+    padding:5   px 0;
+}
+
+.timespan{
+    padding:19px;
+}
+
+
+
+
+
+/* =============bottom=============== */
+.bottom{
+position:sticky;
+height: 120px;
+background-color: black;
+display: flex;
+justify-content:center;
+align-items:center;
+flex-direction: column;
+}
+
+#progressBar{
+    width: 38vw;
+    margin-bottom:15px;
+}
+
+.icons .fa-solid, .icons .fa-light{
+    font-size:1.5rem;
+    color:#b3b3b3;
+    padding:15px;  
+    cursor:pointer;
+}
+
+.icons:hover{
+color:white;
+}
+
+.icons .fa-circle-play{
+    font-size:2rem;
+    color:white !important;
+}
+
+

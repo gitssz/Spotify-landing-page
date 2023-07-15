@@ -14,7 +14,7 @@
     
     <nav>
         <ul>
-            <li class="logo"><img src="spotify_logo.png" alt="logo"><span>Spotify</span></li>
+            <li class="logo"><img src="images/spotify_logo.png" alt="logo"><span>Spotify</span></li>
             <li><a href=""><i class="fa-solid fa-house"></i>Home</a></li>
             <li><a href=""><i class="fa-solid fa-magnifying-glass"></i>Search</a></li>
             <!-- <li><a href="">Login</a></li>
@@ -25,11 +25,54 @@
     <div class="container">
         <h1>Best of K-POP</h1>
             <div class="song-list">
+
                     <div class="song-item">
-                        <img src="butter.png" alt="album image"><span class="song-name">Butter - BTS
+                        <img src="images/dynamite.jpeg" alt="album image"><span class="song-name">Dynamite -BTS
                             <!-- <span class="artist">BTS</span> -->
                         </span>
-                        <span class="timespan">3:25 &nbsp;<i class="fa-solid  fa-circle-play"></i></span>
+                        <span class="timespan">4:02 &nbsp;<i class="fa-solid  fa-circle-play"></i></span>
+                    </div>
+
+                    <div class="song-item">
+                        <img src="images/pyscho.jpeg" alt="album image"><span class="song-name">Psycho - Red Velvet
+                            <!-- <span class="artist">BTS</span> -->
+                        </span>
+                        <span class="timespan">4:10 &nbsp;<i class="fa-solid  fa-circle-play"></i></span>
+                    </div>
+
+                    <div class="song-item">
+                        <img src="images/butter.png" alt="album image"><span class="song-name">Butter - BTS
+                            <!-- <span class="artist">BTS</span> -->
+                        </span>
+                        <span class="timespan">3:02 &nbsp;<i class="fa-solid  fa-circle-play"></i></span>
+                    </div>
+
+                    <div class="song-item">
+                        <img src="images/cupid.jpeg" alt="album image"><span class="song-name">Cupid - FIFTY FIFTY
+                            <!-- <span class="artist">BTS</span> -->
+                        </span>
+                        <span class="timespan">4:14 &nbsp;<i class="fa-solid  fa-circle-play"></i></span>
+                    </div>
+
+                    <div class="song-item">
+                        <img src="images/lovesick.png" alt="album image"><span class="song-name">Lovesick - Blackpink
+                            <!-- <span class="artist">BTS</span> -->
+                        </span>
+                        <span class="timespan">4:03 &nbsp;<i class="fa-solid  fa-circle-play"></i></span>
+                    </div>
+
+                    <div class="song-item">
+                        <img src="images/young_forever.jpeg" alt="album image"><span class="song-name">Forever Young - BTS
+                            <!-- <span class="artist">BTS</span> -->
+                        </span>
+                        <span class="timespan">4:12 &nbsp;<i class="fa-solid  fa-circle-play"></i></span>
+                    </div>
+
+                    <div class="song-item">
+                        <img src="images/young_forever.jpeg" alt="album image"><span class="song-name">Forever Young - BTS
+                            <!-- <span class="artist">BTS</span> -->
+                        </span>
+                        <span class="timespan">4:12 &nbsp;<i class="fa-solid  fa-circle-play"></i></span>
                     </div>
             </div>
             <div class="banner">
@@ -39,20 +82,32 @@
 
 
     <div class="bottom">
+        <div class="songInfo">
+            <div class="currentSong">
+                <img src="images/butter.png" alt="song image" width="50px" height="50px">
+               <div class="songNameContainer">
+                <p >Butter</p>
+                <span>BTS</span>
+                </div>
+            </div>
+        </div>
         <div class="icons">
             <!-- font awesome  -->
             <i class="fa-solid fa-shuffle"></i>
             <i class="fa-solid fa-backward-step"></i> 
-            <i class="fa-solid fa-circle-play"></i>
+            <i class="fa-solid fa-circle-play" id="masterPlay"></i>  
+            <!-- <i class="fa-solid fa-circle-pause"></i> -->
             <i class="fa-solid fa-forward-step"></i>
             <i class="fa-solid fa-repeat"></i>
         </div>
-        <input type="range" name="range" id="progressBar" min="1" max="100">
-
+        <!-- <span>1:02</span> -->
+        <input type="range" name="range" id="masterProgressBar" min="0" value="0" max="100">
+        <!-- <span>4:12</span> -->
     </div>
 
 
 
-<script type="text/js" src="script.js"></script>
+
+<script src="script.js"></script>
 </body>
 </html>

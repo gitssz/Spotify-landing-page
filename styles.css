@@ -1,160 +1,196 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
 
 
-*{
-    padding:0;
-    margin:0;
-    font-size:100%;
-    border:0;
+* {
+    padding: 0;
+    margin: 0;
+    font-size: 100%;
+    border: 0;
 }
 
-body{
-    /* font-family: 'Ubuntu', sans-serif; */
+body {
     background-color: black;
-    /* color:white; */
 }
 
 /*===================navbar==============*/
-nav{
+nav {
     height: 70px;
-    background-color: black;
-    color:white;
-    
+    background-color: rgb(39, 38, 38);
+    color: white;
+    margin:8px;
+    border-radius:11px;
 }
-nav ul{
-    display:flex;
+
+nav ul {
+    display: flex;
     align-items: center;
 }
 
-nav .logo{
-    font-size:1.3rem;
-    font-weight:bolder;
+nav .logo {
+    font-size: 1.3rem;
+    font-weight: bolder;
     display: flex;
     align-items: center;
     font-family: 'Ubuntu', sans-serif;
 }
 
-nav ul li{
+nav ul li {
     list-style-type: none;
-    padding:12px;
+    padding: 12px;
 }
 
-nav ul li a{
+nav ul li a {
     text-decoration: none;
-    color:#b3b3b3 !important;
+    color: #b3b3b3 !important;
     font-family: 'Ubuntu', sans-serif;
     font-weight: bold;
 }
 
-nav ul li:hover{
-    color:white;
+/* not working  */
+nav ul li a:hover {  
+    color: white;
 }
 
-nav img{
+nav img {
     height: 45px;
-    width:45px;
-    padding-right:5px;
+    width: 45px;
+    padding-right: 5px;
 }
 
-nav .fa-solid{
-    padding:0 6px;
-    font-size:1.3rem;
+nav .fa-solid {
+    padding: 0 6px;
+    font-size: 1.3rem;
 }
 
 /*=====================container=================== */
-.container{
-    min-height: 70vh;
-    font-family: 'Ubuntu',sans-serif;
-    /* background-color: black; */
-    background:url("kpop2.jpg");
-    color:white;
-    margin:20px auto;
-    width:70%;
-    border-radius:12px;
-    padding:30px;
+.container {
+    min-height: 70.5vh;
+    font-family: 'Ubuntu', sans-serif;
+    background: url("images/namjohyuk.webp");
+    color: white;
+    margin: 20px auto;
+    width: 70%;
+    border-radius: 10px;
+    padding: 30px;
     display: flex;
     flex-direction: column;
-    align-items:flex-start;
-    box-shadow: 1px 1px 14px white;
+    align-items: flex-start;
 }
 
-.container h1{
-    font-size:2.2rem;
+.container h1 {
+    font-size: 2.2rem;
     height: 50px;
-    margin:20px;
+    margin: 20px;
 }
 
-
-.song-item{
-    position:relative;
+.song-item {
+    position: relative;
     background-color: black;
-    height: 70px;
-    width:28vw;
+    height: 65px;
+    width: 25vw;
     border-radius: 35px;
     display: flex;
     justify-content: space-between;
-    align-items:center;
+    align-items: center;
+    margin: 10px;
 }
 
-.song-item img{
-    height:50px;
-    width:50px;
-    border-radius:50%;
-    margin:15px;
+.song-item img {
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    margin: 15px;
 }
 
-.song-name{
-display: flex;
-flex-direction: column;
-align-items: center;
-padding:10px;
-/* position:absolute;
-left:90px; */
+.song-item .fa-circle-play {
+    font-size: 1.4rem;
+    padding: 10px;
+    cursor: pointer;
 }
 
-.artist{
-    color:#b3b3b3;
-    padding:5   px 0;
+.song-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 
-.timespan{
-    padding:19px;
+.artist {
+    color: #b3b3b3;
+    padding: 5px 0;
 }
 
-
-
-
+.timespan {
+    padding: 19px;
+}
 
 /* =============bottom=============== */
-.bottom{
-position:sticky;
-height: 120px;
-background-color: black;
-display: flex;
-justify-content:center;
-align-items:center;
-flex-direction: column;
+.bottom {
+    position: sticky;
+    padding: 10px 0;
+    height:80px;
+    background-color: rgb(39, 38, 38);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius:8px;
+    margin:10px;
+    font-family: 'Ubuntu', sans-serif;
+    /* box-shadow: 3px 2px 4px #b3b3b3; */
+    /* margin:10px; */
 }
 
-#progressBar{
-    width: 38vw;
-    margin-bottom:15px;
+.songInfo {
+    color: white;
+    position: absolute;
+    left: 2vw;
+    text-align: center;
 }
 
-.icons .fa-solid, .icons .fa-light{
-    font-size:1.5rem;
+.currentSong {
+    display: flex;
+}
+
+.currentSong img {
+    padding: 0 10px;
+    height: 60px;
+    width: 60px;
+}
+
+.songNameContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 5px;
+    font-size: 16px;
+}
+
+.songNameContainer span{
     color:#b3b3b3;
-    padding:15px;  
-    cursor:pointer;
+    font-size:15px;
 }
 
-.icons:hover{
-color:white;
+#masterProgressBar {
+    width: 38vw;
+    margin-bottom: 10px;
+    cursor: pointer;
 }
 
-.icons .fa-circle-play{
-    font-size:2rem;
-    color:white !important;
+.icons .fa-solid,
+.icons .fa-light {
+    font-size: 1.5rem;
+    color: #b3b3b3;
+    padding: 15px;
+    cursor: pointer;
 }
 
+.icons i:hover {
+    color: white;
+}
 
+.icons .fa-circle-play {
+    font-size: 2rem;
+    color: white !important;
+}

@@ -2,6 +2,9 @@ let songIndex = 0;
 let masterPlay = document.getElementById("masterPlay");
 let masterProgressBar = document.getElementById("masterProgressBar");
 let songItems = Array.from(document.getElementsByClassName("song-item"));
+let currentSongName = document.getElementsByClassName("curretnSongName");
+let songImage = document.getElementsByClassName("songImage");
+let artist = document.getElementsByClassName("artist");
 
 let songs = [
   {
@@ -37,7 +40,7 @@ let songs = [
   {
     songName: "I am",
     artists: "IVE",
-    filePath: "songs/iam.mp3",
+    filePath: "songs/Iam.mp3",
     coverPath: "images/kpop.jpg",
   },
   {
@@ -49,14 +52,13 @@ let songs = [
 ];
 
 songItems.forEach((element, i) => {
-  // console.log(element,i);
   element.getElementsByTagName("img")[0].src = songs[i].coverPath;
-  element.getElementsByClassName("song-name")[0].textContent =songs[i].songName;
-//   element.getElementsByClassName("artist")[0].textContent= songs[i].artists;
+  element.getElementsByClassName("song-name")[0].textContent =
+  songs[i].songName;
+  // element.getElementsByClassName("artist")[0].textContent = songs[i].artists;
 });
 
-let audioElement = new Audio("songs/Butter.mp3");
-// audioElement.play();
+let audioElement = new Audio("songs/Iam.mp3");
 
 masterPlay.addEventListener("click", () => {
   if (audioElement.paused || audioElement.currentTime <= 0) {
@@ -72,13 +74,10 @@ masterPlay.addEventListener("click", () => {
   }
 });
 
-audioElement.addEventListener("timeupdate", () => {
-  // console.log('timeupdate');
-
+audioElement.addEventListener("timeupdate", () => { //progresbar update
   let progress = parseInt(
     (audioElement.currentTime / audioElement.duration) * 100
   );
-  console.log("progress  ", progress);
 
   masterProgressBar.value = progress;
 });
@@ -87,7 +86,6 @@ audioElement.addEventListener("timeupdate", () => {
 masterProgressBar.addEventListener("change", () => {
   audioElement.currentTime =
     (masterProgressBar.value * audioElement.duration) / 100;
-  console.log("audio ", audioElement.currentTime);
 });
 
 const makeAllPlay = () => {
@@ -95,6 +93,7 @@ const makeAllPlay = () => {
     (element) => {
       element.classList.remove("fa-circle-pause");
       element.classList.add("fa-circle-play");
+
       element.style.fontSize = "1.4rem";
       element.style.padding = "10px";
       element.style.color = "white";
@@ -102,25 +101,65 @@ const makeAllPlay = () => {
   );
 };
 
+
+const makeAllPause=()=>{
+  Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
+    element.classList.remove("fa-circle-play");
+    element.classList.add("fa-circle-pause");
+
+    element.style.fontSize = "1.4rem";
+    element.style.padding = "10px";
+    element.style.color = "white";
+  })
+
+}
+
 Array.from(document.getElementsByClassName("songItemPlay")).forEach(
   (element) => {
     element.addEventListener("click", (e) => {
-      //  console.log(e.target);
-      let index = e.target.id;
+      let song = e.target.id;
       makeAllPlay();
-      // if(audioElement.paused || audioElement.currentTime<=0){
-      e.target.classList.remove("fa-circle-play");
-      e.target.classList.add("fa-circle-pause");
-      e.target.style.fontSize = "1.4rem";
-      e.target.style.padding = "10px";
-      e.target.style.color = "white";
-      audioElement.src = `songs/${index}.mp3`;
-      currentTime = 0;
-      audioElement.play();
-      masterPlay.classList.remove("fa-circle-play");
-      masterPlay.classList.add("fa-circle-pause");
+      if (audioElement.paused) {
+        e.target.classList.remove("fa-circle-play");
+        e.target.classList.add("fa-circle-pause");
+        e.target.style.fontSize = "1.4rem";
+        e.target.style.padding = "10px";
+        e.target.style.color = "white";
+        audioElement.src = `songs/${song}.mp3`;
 
-      // }
+        // songImage.src = element.coverPath;
+        // currentSongName.textContent = song;
+
+        audioElement.play();
+        masterPlay.classList.remove("fa-circle-play");
+        masterPlay.classList.add("fa-circle-pause");
+        masterPlay.style.color = "white";
+        masterPlay.style.fontSize="2rem";
+      } else {    //if music is playing
+        audioElement.pause();
+        e.target.classList.remove("fa-circle-play");
+        e.target.classList.add("fa-circle-pause");
+        e.target.style.fontSize = "1.4rem";
+        e.target.style.padding = "10px";
+        e.target.style.color = "white";
+      }
+
+      // currentTime = 0
+      console.log(song); //song name
     });
   }
 );
+
+const nextSong = () => {
+  document.getElementById("next").addEventListener("click", () => {
+    console.log(songIndex);
+    if (songIndex == songItems.length - 1) {
+      songIndex = 0;
+    } else {
+      songIndex += 1;
+    }
+
+    audioElement.src = `songs/${songs[songIndex].textContent}.mp3`;
+    audioElement.play();
+  });
+};

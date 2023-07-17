@@ -66,15 +66,18 @@ nav .fa-solid {
 .container {
     min-height: 70.5vh;
     font-family: 'Ubuntu', sans-serif;
-    background: url("images/namjohyuk.webp");
+    background: url("images/kpop2.jpg");
     color: white;
     margin: 20px auto;
-    width: 70%;
-    border-radius: 10px;
+    width: 68%;
+    border-radius: 30px;
     padding: 30px;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    box-shadow: 0 40px 100px -20px rgba(10,37,64, 0.55),
+    0 50px 30px -30px rgba(0,0,0, 0.3),
+    inset 0 -5px 10px 0 rgba(10,37,64,.55);
 }
 
 .container h1 {
@@ -87,7 +90,7 @@ nav .fa-solid {
     position: relative;
     background-color: black;
     height: 65px;
-    width: 25vw;
+    width:30vw;
     border-radius: 35px;
     display: flex;
     justify-content: space-between;
@@ -102,11 +105,13 @@ nav .fa-solid {
     margin: 15px;
 }
 
-.song-item .fa-circle-play {
+.song-item .fa-solid {
     font-size: 1.4rem;
     padding: 10px;
+    /* visibility: hidden; */
     cursor: pointer;
 }
+
 
 .song-name {
     display: flex;
@@ -177,10 +182,15 @@ nav .fa-solid {
     margin-bottom: 10px;
     cursor: pointer;
 }
+.icons{
+    display:flex;
+    justify-content: center;
+    align-items:center;
+}
 
 .icons .fa-solid,
 .icons .fa-light {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     color: #b3b3b3;
     padding: 15px;
     cursor: pointer;
@@ -194,3 +204,29 @@ nav .fa-solid {
     font-size: 2rem;
     color: white !important;
 }
+
+
+
+
+
+
+
+
+
+
+
+ /*  
+min-height: 70.5vh;
+font-family: 'Ubuntu', sans-serif;
+background: url(images/namjohyuk.webp);
+color: white;
+margin: 20px auto;
+width: 70%;
+border-radius: 28px;
+padding: 30px;
+display: flex;
+flex-direction: column;
+align-items: flex-start;
+box-shadow: 0 242px 169px -20px rgba(22,73,64, 0.55), 0 53px 81px -15px rgba(22,22,61, 53.3), inset 0 -9px 42px 0 rgba(49,52,64,4.55);
+}
+*/

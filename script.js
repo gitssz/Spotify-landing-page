@@ -32,9 +32,9 @@ let songs = [
     coverPath: "images/young_forever.jpeg",
   },
   {
-    songName: "young forever",
+    songName: "Go-Go",
     artists: "BTS",
-    filePath: "songs/Butte.mp3",
+    filePath: "songs/Go-Go.mp3",
     coverPath: "images/young_forever.jpeg",
   },
   {
@@ -102,50 +102,35 @@ const makeAllPlay = () => {
 };
 
 
-const makeAllPause=()=>{
-  Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
-    element.classList.remove("fa-circle-play");
-    element.classList.add("fa-circle-pause");
-
-    element.style.fontSize = "1.4rem";
-    element.style.padding = "10px";
-    element.style.color = "white";
-  })
-
-}
 
 Array.from(document.getElementsByClassName("songItemPlay")).forEach(
   (element) => {
     element.addEventListener("click", (e) => {
       let song = e.target.id;
       makeAllPlay();
+      
       if (audioElement.paused) {
         e.target.classList.remove("fa-circle-play");
         e.target.classList.add("fa-circle-pause");
-        e.target.style.fontSize = "1.4rem";
-        e.target.style.padding = "10px";
-        e.target.style.color = "white";
-        audioElement.src = `songs/${song}.mp3`;
 
-        // songImage.src = element.coverPath;
-        // currentSongName.textContent = song;
-
-        audioElement.play();
         masterPlay.classList.remove("fa-circle-play");
         masterPlay.classList.add("fa-circle-pause");
+        masterPlay.style.fontSize = "2rem";
+        masterPlay.style.padding = "10px";
         masterPlay.style.color = "white";
-        masterPlay.style.fontSize="2rem";
+        audioElement.src = `songs/${song}.mp3`;
+        audioElement.play();
+      
       } else {    //if music is playing
         audioElement.pause();
-        e.target.classList.remove("fa-circle-play");
-        e.target.classList.add("fa-circle-pause");
-        e.target.style.fontSize = "1.4rem";
-        e.target.style.padding = "10px";
-        e.target.style.color = "white";
-      }
+        e.target.classList.remove("fa-circle-pause");
+        e.target.classList.add("fa-circle-play");        
+      
 
-      // currentTime = 0
-      console.log(song); //song name
+        masterPlay.classList.remove("fa-circle-pause");
+        masterPlay.classList.add("fa-circle-play");
+
+      }
     });
   }
 );
@@ -163,3 +148,34 @@ const nextSong = () => {
     audioElement.play();
   });
 };
+
+
+// const playConsistency=()=>{
+
+//   songItems.forEach((element)=>{
+//     element.addEventListener("click",()=>{
+      
+//       // console.log(element);
+//       songId=element.target.id;
+//       // console.log(songId);
+//       if(songId.paused){
+//         element.classList.remove("fa-circle-play");
+//         element.classList.add("fa-circle-pause");
+
+//         masterPlay.classList.remove("fa-circle-play");
+//         masterPlay.classList.add("fa-circle-pause");
+//       }
+//       else{ //song is playing
+//         element.classList.remove("fa-circle-pause");
+//         element.classList.add("fa-circle-play");        
+    
+//         masterPlay.classList.remove("fa-circle-pause");
+//         masterPlay.classList.add("fa-circle-play");
+
+//       }
+
+//     })
+
+//   })
+
+// }

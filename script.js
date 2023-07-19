@@ -71,6 +71,7 @@ masterPlay.addEventListener("click", () => {
     audioElement.pause();
     masterPlay.classList.remove("fa-circle-pause");
     masterPlay.classList.add("fa-circle-play");
+    masterPlayControls()
   }
 });
 
@@ -102,6 +103,25 @@ const makeAllPlay = () => {
 };
 
 
+// const masterPlayControls=()=>{
+//   Array.from(document.getElementsByClassName("songItemPlay")).forEach((element)=>{
+
+//     element.addEventListener("click",(e)=>{
+
+//     let songId =e.target.id; 
+// // let songId= audioElement.src  
+
+//     if(masterPlay.paused){
+//          e.target.classList.remove("fa-circle-play");
+//          e.target.classList.add("fa-circle-pause");
+//     }
+//     else{
+//          e.target.classList.remove("fa-circle-pause");
+//          e.target.classList.add("fa-circle-play");
+//     }
+//   })
+//   })
+// }
 
 Array.from(document.getElementsByClassName("songItemPlay")).forEach(
   (element) => {
@@ -120,13 +140,13 @@ Array.from(document.getElementsByClassName("songItemPlay")).forEach(
         masterPlay.style.color = "white";
         audioElement.src = `songs/${song}.mp3`;
         audioElement.play();
-      
-      } else {    //if music is playing
+      } 
+
+      else {    //if music is playing
         audioElement.pause();
         e.target.classList.remove("fa-circle-pause");
         e.target.classList.add("fa-circle-play");        
       
-
         masterPlay.classList.remove("fa-circle-pause");
         masterPlay.classList.add("fa-circle-play");
 
@@ -150,32 +170,7 @@ const nextSong = () => {
 };
 
 
-// const playConsistency=()=>{
 
-//   songItems.forEach((element)=>{
-//     element.addEventListener("click",()=>{
-      
-//       // console.log(element);
-//       songId=element.target.id;
-//       // console.log(songId);
-//       if(songId.paused){
-//         element.classList.remove("fa-circle-play");
-//         element.classList.add("fa-circle-pause");
 
-//         masterPlay.classList.remove("fa-circle-play");
-//         masterPlay.classList.add("fa-circle-pause");
-//       }
-//       else{ //song is playing
-//         element.classList.remove("fa-circle-pause");
-//         element.classList.add("fa-circle-play");        
-    
-//         masterPlay.classList.remove("fa-circle-pause");
-//         masterPlay.classList.add("fa-circle-play");
 
-//       }
-
-//     })
-
-//   })
-
-// }
+// songs\/[a-zA-Z]*\.mp3

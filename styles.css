@@ -123,12 +123,12 @@ nav .fa-solid {
 /*==================sidebar===============  */
 .sidebar {
     position: fixed;
-    top: 139px;
+    top: 140px;
     left: 0;
     height: 75vh;
     width: 20vw;
     padding-right: 6px;
-    background-color: rgb(27, 25, 25);
+    background-color: rgb(21, 20, 20);
     color: white;
     margin: 5px;
     border-radius: 6px;
@@ -185,12 +185,10 @@ nav .fa-solid {
 }
 
 .playlist {
-    font-family: 'Montserrat',sans-serif;
+    font-family: 'Montserrat', sans-serif;
     display: inline;
     gap: 0px;
-    /* justify-content:space-between; */
-    align-items: center;
-    /* flex-direction: column; */
+    /* align-items: center; */
 }
 
 .playlist-item {
@@ -211,7 +209,7 @@ nav .fa-solid {
 }
 
 .show-all:hover {
-    color: white;
+    text-decoration: underline;
     cursor: pointer;
 }
 
@@ -219,7 +217,7 @@ nav .fa-solid {
     color: white;
     font-size: 1.6rem;
     font-weight: bold;
-    font-family:sans-serif;
+    font-family: sans-serif;
     padding: 7px 20px;
 }
 
@@ -232,14 +230,14 @@ nav .fa-solid {
     cursor: pointer;
     overflow: hidden;
     padding: 10px 15px;
-    background-color:#252525cc;
+    background-color: #252525cc;
     border-radius: 7px;
     position: relative;
-transition: all 0.4s ease;
+    transition: all 0.4s ease;
 }
 
-.song-item:hover{
-    background:linear-gradient(rgba(55, 54, 54, 0.438),#42414187) ;
+.song-item:hover {
+    background: linear-gradient(rgba(55, 54, 54, 0.438), #42414187);
     transition: 0.3s ease;
 }
 
@@ -256,73 +254,86 @@ transition: all 0.4s ease;
     overflow: hidden;
     height: 150px;
     width: 150px;
-    display: relative;
+    /* display: relative; */
 }
 
 .song-item img {
     min-width: 140px;
     height: 160px;
     width: 160px;
-    border-radius:6px;
+    border-radius: 6px;
     overflow: hidden;
     /* padding-bottom  :10px; */
 }
 
-/* .play-icon{ */
-    /* visibility: hidden; */
-    /* opacity: 0.  2; */
-/* } */
-
-.fa-circle-play{
-    background-color: black;
-    height:40px;
-    width:40px;
-    border-radius:50%;
-    z-index: 100;
-    opacity:0;
-    color:#1db954;
-    /* visibility: hidden; */
-
+.play{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items:center;
 }
-.song-item:hover .fa-circle-play{
+
+.fa-play{
+    background-color: #1db954;
+    /* height: 40px;
+    width: 40px; */
+    padding:10px;
+    border-radius: 50%;
+    opacity: 0; 
+    color:black;
+    font-size:1.1rem;
+}
+
+.song-item:hover .fa-play{
+    position:absolute;
+    right:8px;
+    /* bottom:0px; */
+    top:-38px;
+    opacity:1;
+    transition:all 0.4s ease;
+    transform: translateY(-27px);
+}
+
+.fa-circle-play {
+    background-color: black;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    z-index: 100;
+    opacity: 0;
+    color: #1db954;
+}
+
+.song-item:hover .fa-circle-play {
     position: absolute;
-    right:27px;
-    bottom:130px;
+    right: 27px;
+    bottom: 130px;
     font-size: 2.3rem;
-opacity: 1;
-    /* visibility: visible; */
-    /* transition: all 0.3s ease; */
+    opacity: 1;
     transform: translateY(5px);
 
 }
 
-/* .play-icon .fa-solid:hover{
-    color:black;
-    font-size:1.3rem;
-} */
-
-.text{
-    line-height: 25px;  
+.text {
+    line-height: 25px;
+    max-width: 150px;
+    /*necessary for ellipsis to work,that too in px*/
 }
 
 .text h3 {
-    letter-spacing: normal;
     padding: 15px 0 10px 0;
-    font-size: 1rem;
-    font-weight:bolder;
+    font-weight: bolder;
     font-family: sans-serif;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
 .text p {
     color: #b3b3b3;
     font-size: 15px;
-    /* letter-spacing: 1px; */
-    font-family:sans-serif;
-
-}
+    font-family: sans-serif;
+ }
 
 
 

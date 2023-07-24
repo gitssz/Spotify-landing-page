@@ -230,10 +230,11 @@ nav .fa-solid {
     cursor: pointer;
     overflow: hidden;
     padding: 10px 15px;
-    background-color: #252525cc;
+    background-color: #17171783;
     border-radius: 7px;
     position: relative;
     transition: all 0.4s ease;
+    margin-bottom:20px;
 }
 
 .song-item:hover {
@@ -277,18 +278,18 @@ nav .fa-solid {
     background-color: #1db954;
     /* height: 40px;
     width: 40px; */
-    padding:10px;
+    padding:13px;
     border-radius: 50%;
     opacity: 0; 
     color:black;
-    font-size:1.1rem;
+    font-size:1.3rem;
 }
 
 .song-item:hover .fa-play{
     position:absolute;
     right:8px;
     /* bottom:0px; */
-    top:-38px;
+    top:-43px;
     opacity:1;
     transition:all 0.4s ease;
     transform: translateY(-27px);

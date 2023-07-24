@@ -1,261 +1,461 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Spotify</title>
-    <!-- stylesheet  -->
-    <link rel="stylesheet" href="styles.css" />
-    <!-- font awesome  -->
-    <script
-      src="https://kit.fontawesome.com/c3594f8b00.js"
-      crossorigin="anonymous"
-    ></script>
-  </head>
-  <body>
-    <!-- navigation  -->
-    <nav>
-      <ul>
-        <li class="active">
-          <a href=""><i class="fa-solid fa-house"></i>Home</a>
-        </li>
-        <li>
-          <a href=""><i class="fa-solid fa-magnifying-glass"></i>Search</a>
-        </li>
-      </ul>
-    </nav>
-
-    <!-- topbar  -->
-    <div class="topbar">
-      <div class="prev-next-button">
-        <i class="fa-solid fa-chevron-left"></i>
-        <i class="fa-solid fa-chevron-right"></i>
+   <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Spotify</title>
+      <!-- stylesheet  -->
+      <link rel="stylesheet" href="styles.css" />
+      <!-- font awesome  -->
+      <script
+         src="https://kit.fontawesome.com/c3594f8b00.js"
+         crossorigin="anonymous"
+         ></script>
+   </head>
+   <body>
+      <!-- navigation  -->
+      <nav>
+         <ul>
+            <li class="active">
+               <a href=""><i class="fa-solid fa-house"></i>Home</a>
+            </li>
+            <li>
+               <a href=""><i class="fa-solid fa-magnifying-glass"></i>Search</a>
+            </li>
+         </ul>
+      </nav>
+      <!-- topbar  -->
+      <div class="topbar">
+         <div class="prev-next-button">
+            <i class="fa-solid fa-chevron-left"></i>
+            <i class="fa-solid fa-chevron-right"></i>
+         </div>
+         <h4>Sign up</h4>
+         <button type="submit" class="login">Log in</button>
       </div>
-
-      <h4>Sign up</h4>
-      <button type="submit" class="login">Log in</button>
-    </div>
-
-    <!-- sidebar -->
-    <div class="sidebar">
-      <div>
-        <p><i class="fa-solid fa-book"></i>Your Library</p>
-        <span><i class="fa-solid fa-plus"></i></span>
+      <!-- sidebar -->
+      <div class="sidebar">
+         <div>
+            <p><i class="fa-solid fa-book"></i>Your Library</p>
+            <span><i class="fa-solid fa-plus"></i></span>
+         </div>
+         <div>
+            <p><i class="fa-solid fa-heart"></i>Liked Songs</p>
+         </div>
       </div>
-      <div>
-        <p><i class="fa-solid fa-heart"></i>Liked Songs</p>
-      </div>
-    </div>
-
-    <!-- container  -->
-    <div class="container">
-      <!-- <div class=""> -->
+      <!-- container  -->
+      <div class="container">
+      <div class="playlist">
         <div class="playlist-item">
+          <div class="playlist-name">
+              <h2>Focus</h2>
+          </div>
+          <div class="show-all">
+              <p>Show all</p>
+          </div>
+        </div>
+        <div class="song-item">
+          <div class="song-container">
+              <div class="img-container">
+                <img src="images/kpop2.jpg" />
+                <div class="play">
+                    <span class="fa fa-play"></span>
+                </div>
+              </div>
+              <div class="text">
+                <h3>Peaceful Piano</h3>
+                <p>Peaceful piano to help you slow...</p>
+              </div>
+          </div>
+        </div>
+        <div class="song-item">
+          <div class="song-container">
+              <div class="img-container">
+                <img src="images/btss.jpeg" />
+                <div class="play">
+                    <span class="fa fa-play"></span>
+                </div>
+              </div>
+              <!-- </div> -->
+              <div class="text">
+                <h3>Peaceful Piano</h3>
+                <p>Peaceful piano to help you slow...</p>
+              </div>
+          </div>
+        </div>
+        <div class="song-item">
+          <div class="song-container">
+              <div class="img-container">
+                <img src="images/taylor.jpeg" />
+                <div class="play">
+                    <span class="fa fa-play"></span>
+                </div>
+              </div>
+              <div class="text">
+                <h3>Peaceful Piano</h3>
+                <p>Peaceful piano to help you slow...</p>
+              </div>
+          </div>
+        </div>
+        <div class="song-item">
+          <div class="song-container">
+              <div class="img-container">
+                <img src="images/lovesick.png" />
+                <div class="play">
+                    <span class="fa fa-play"></span>
+                </div>
+              </div>
+              <div class="text">
+                <h3>Peaceful Piano</h3>
+                <p>Peaceful piano to help you slow...</p>
+              </div>
+          </div>
+        </div>
+        <div class="song-item">
+          <div class="song-container">
+              <div class="img-container">
+                <img src="images/kpop2.jpg" />
+                <div class="play">
+                    <span class="fa fa-play"></span>
+                </div>
+              </div>
+              <div class="text">
+                <h3>Peaceful Piano</h3>
+                <p>Peaceful piano to help you slow...</p>
+              </div>
+          </div>
+        </div>
+        <div class="song-item">
+          <div class="song-container">
+              <div class="img-container">
+                <img src="images/lovesick.png" />
+                <div class="play">
+                    <span class="fa fa-play"></span>
+                </div>
+              </div>
+              <div class="text">
+                <h3>Peaceful Piano</h3>
+                <p>Peaceful piano to help you slow...</p>
+              </div>
+          </div>
+        </div>
+        <div class="song-item">
+          <div class="song-container">
+              <div class="img-container">
+                <img src="images/pyscho.jpeg" />
+                <div class="play">
+                    <span class="fa fa-play"></span>
+                </div>
+              </div>
+              <div class="text">
+                <h3>Peaceful Piano</h3>
+                <p>Peaceful piano to help you slow...</p>
+              </div>
+          </div>
+          </div>
+    </div>
+         <!-- ============================================================= -->
+         
+         <div class="playlist">
+          <div class="playlist-item">
             <div class="playlist-name">
                 <h2>Focus</h2>
             </div>
             <div class="show-all">
-              <p>Show all</p>
-            </div> 
+                <p>Show all</p>
+            </div>
           </div>
           <div class="song-item">
-                <div class="song-container">
-                  <div class="img-container"> 
-                    <img src="images/kpop2.jpg" />
-                    <div class="play">
-                       <span class="fa fa-play"></span>
-                    </div>
-                  </div>
-                    <div class="text">
-                      <h3>Peaceful Piano</h3>
-                      <p>Peaceful piano to help you slow...</p>
-                    </div>
-                </div>
-              </div>
-
-            <div class="song-item">
-              <div class="song-container">
-                <div class="img-container"> 
-                  <img src="images/btss.jpeg" />
-                  <div class="play">
-                    <span class="fa fa-play"></span>
-                  </div>
-                  </div>
-                    <!-- </div> -->
-                  <div class="text">
-                    <h3>Peaceful Piano</h3>
-                    <p>Peaceful piano to help you slow...</p>
-                  </div>
-              </div>
-            </div>
-
-            <div class="song-item">
-              <div class="song-container">
-                <div class="img-container"> 
-                  <img src="images/taylor.jpeg" />
-                  <div class="play">
-                    <span class="fa fa-play"></span>
-                 </div>
-                 </div>
-                  <div class="text">
-                    <h3>Peaceful Piano</h3>
-                    <p>Peaceful piano to help you slow...</p>
-                  </div>
-              </div>
-            </div>
-
-            <div class="song-item">
-              <div class="song-container">
-                <div class="img-container"> 
-                  <img src="images/lovesick.png" />
-                  <div class="play">
-                    <span class="fa fa-play"></span>
-                 </div>
-                  </div>
-                  <div class="text">
-                    <h3>Peaceful Piano</h3>
-                    <p>Peaceful piano to help you slow...</p>
-                  </div>
-              </div>
-            </div>
-
-            <div class="song-item">
-              <div class="song-container">
-                <div class="img-container"> 
+            <div class="song-container">
+                <div class="img-container">
                   <img src="images/kpop2.jpg" />
                   <div class="play">
-                    <span class="fa fa-play"></span>
-                 </div>
+                      <span class="fa fa-play"></span>
                   </div>
-                  <div class="text">
-                    <h3>Peaceful Piano</h3>
-                    <p>Peaceful piano to help you slow...</p>
-                  </div>
-              </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
             </div>
-            <div class="song-item">
-              <div class="song-container">
-                <div class="img-container"> 
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
+                  <img src="images/btss.jpeg" />
+                  <div class="play">
+                      <span class="fa fa-play"></span>
+                  </div>
+                </div>
+                <!-- </div> -->
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
+            </div>
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
+                  <img src="images/taylor.jpeg" />
+                  <div class="play">
+                      <span class="fa fa-play"></span>
+                  </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
+            </div>
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
                   <img src="images/lovesick.png" />
                   <div class="play">
-                    <span class="fa fa-play"></span>
-                 </div>
+                      <span class="fa fa-play"></span>
                   </div>
-                  <div class="text">
-                    <h3>Peaceful Piano</h3>
-                    <p>Peaceful piano to help you slow...</p>
-                  </div>
-              </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
             </div>
-
-            <div class="song-item">
-              <div class="song-container">
-                <div class="img-container"> 
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
+                  <img src="images/kpop2.jpg" />
+                  <div class="play">
+                      <span class="fa fa-play"></span>
+                  </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
+            </div>
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
+                  <img src="images/lovesick.png" />
+                  <div class="play">
+                      <span class="fa fa-play"></span>
+                  </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
+            </div>
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
                   <img src="images/pyscho.jpeg" />
                   <div class="play">
-                    <span class="fa fa-play"></span>
-                 </div>
+                      <span class="fa fa-play"></span>
                   </div>
-                  <div class="text">
-                    <h3>Peaceful Piano</h3>
-                    <p>Peaceful piano to help you slow...</p>
-                  </div>
-              </div>
-            <!-- </div> -->
-        <!-- </div> -->
-
-     <!-- ============================================================= -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            <!-- footer  -->
-            <!-- <div class="footer">
-              <div class="company">
-                <h3>Company</h3>
-                <a href="#">About</a>
-                <a href="#">Jobs</a>
-                <a href="#">For the record</a>
-              </div>
-
-              <div class="community">
-                <h3>Community</h3>
-                <a href="#">Artist</a>
-                <a href="#">Developers</a>
-                <a href="#">Advertising</a>
-                <a href="#">Investor</a>
-                <a href="#">Vendors</a>
-                <a href="#">Spotify for work</a>
-              </div>
-              
-              <div class="useful-link">
-                <h3>Useful link</h3>
-                <a href="#">Support</a>
-                <a href="#">Free mobile app</a>
-              </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
             </div>
+            </div>
+         
+         <!-- ====================================================================== -->
+         <div class="playlist">
+          <div class="playlist-item">
+            <div class="playlist-name">
+                <h2>Focus</h2>
+            </div>
+            <div class="show-all">
+                <p>Show all</p>
+            </div>
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
+                  <img src="images/kpop2.jpg" />
+                  <div class="play">
+                      <span class="fa fa-play"></span>
+                  </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
+            </div>
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
+                  <img src="images/btss.jpeg" />
+                  <div class="play">
+                      <span class="fa fa-play"></span>
+                  </div>
+                </div>
+                <!-- </div> -->
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
+            </div>
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
+                  <img src="images/taylor.jpeg" />
+                  <div class="play">
+                      <span class="fa fa-play"></span>
+                  </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
+            </div>
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
+                  <img src="images/lovesick.png" />
+                  <div class="play">
+                      <span class="fa fa-play"></span>
+                  </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
+            </div>
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
+                  <img src="images/kpop2.jpg" />
+                  <div class="play">
+                      <span class="fa fa-play"></span>
+                  </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
+            </div>
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
+                  <img src="images/lovesick.png" />
+                  <div class="play">
+                      <span class="fa fa-play"></span>
+                  </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
+            </div>
+          </div>
+          <div class="song-item">
+            <div class="song-container">
+                <div class="img-container">
+                  <img src="images/pyscho.jpeg" />
+                  <div class="play">
+                      <span class="fa fa-play"></span>
+                  </div>
+                </div>
+                <div class="text">
+                  <h3>Peaceful Piano</h3>
+                  <p>Peaceful piano to help you slow...</p>
+                </div>
+            </div>
+            </div>
+         
+         
+         
+         
+         
+         
+         
 
+
+         
+         
+         </div>
+         
+         <!-- footer  -->
+         <!-- <div class="footer">
+            <div class="company">
+              <h3>Company</h3>
+              <a href="#">About</a>
+              <a href="#">Jobs</a>
+              <a href="#">For the record</a>
+            </div>
+            
+            <div class="community">
+              <h3>Community</h3>
+              <a href="#">Artist</a>
+              <a href="#">Developers</a>
+              <a href="#">Advertising</a>
+              <a href="#">Investor</a>
+              <a href="#">Vendors</a>
+              <a href="#">Spotify for work</a>
+            </div>
+            
+            <div class="useful-link">
+              <h3>Useful link</h3>
+              <a href="#">Support</a>
+              <a href="#">Free mobile app</a>
+            </div>
+            </div>
+            
             <hr>
             <p> 2023 Spotify AB</p>-->
-
-    </div>
-
-
-<!-- preview -->
-<div class="preview">
-    <div class="preview-text">
-      <div>
-        <h6>Preview of Spotify</h6>
-        <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
-      </div>
-    </div>
-    <div class="button">
-      <button type="submit">Sign up for free</button>
-    </div>
-</div>
-
-
-    <!-- bottom container -->
-    <!-- <div class="bottom">
-        <div class="current-song">
-            <img src="images/butter.png">
-            <div class="song">
-                <h4 class="song-name">Butter</h4>
-                <p class="artist">BTS</p>
-            </div>
-        </div>
-        <div class="song-player">
-            <div class="icons">
-                <i class="fa-solid fa-shuffle"></i>
-                <i id="previous" class="fa-solid fa-backward-step"></i> 
-                <i class="fa-solid fa-circle-play" id="masterPlay"></i>  
-                <i id="next" class="fa-solid fa-forward-step"></i>
-                <i class="fa-solid fa-repeat"></i>
-            </div>
+      
+      
+            <!-- </div> container  -->
+      
+      
+      
+            <!-- preview -->
+      <div class="preview">
+         <div class="preview-text">
             <div>
-                <input type="range" min="0",max="100">
+               <h6>Preview of Spotify</h6>
+               <p>Sign up to get unlimited songs and podcasts with occasional ads. No credit card needed.</p>
             </div>
-        </div>
-    </div> -->
-
-
-
-
-
-    <!-- <script src="script.js"></script> -->
-  </body>
+         </div>
+         <div class="button">
+            <button type="submit">Sign up for free</button>
+         </div>
+      </div>
+      <!-- bottom container -->
+      <!-- <div class="bottom">
+         <div class="current-song">
+             <img src="images/butter.png">
+             <div class="song">
+                 <h4 class="song-name">Butter</h4>
+                 <p class="artist">BTS</p>
+             </div>
+         </div>
+         <div class="song-player">
+             <div class="icons">
+                 <i class="fa-solid fa-shuffle"></i>
+                 <i id="previous" class="fa-solid fa-backward-step"></i> 
+                 <i class="fa-solid fa-circle-play" id="masterPlay"></i>  
+                 <i id="next" class="fa-solid fa-forward-step"></i>
+                 <i class="fa-solid fa-repeat"></i>
+             </div>
+             <div>
+                 <input type="range" min="0",max="100">
+             </div>
+         </div>
+         </div> -->
+      <!-- <script src="script.js"></script> -->
+   </body>
 </html>
